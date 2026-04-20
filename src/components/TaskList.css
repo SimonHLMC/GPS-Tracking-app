@@ -1,0 +1,256 @@
+.task-list {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.task-list h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.no-tasks {
+  color: #999;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-style: italic;
+}
+
+.task-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.task-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.task-item.completed {
+  opacity: 0.7;
+  background: #f9f9f9;
+}
+
+.task-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.task-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.task-status {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255,255,255,0.2);
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.task-status.done {
+  background: rgba(0,255,0,0.3);
+  color: #0a0;
+}
+
+.task-status.active {
+  background: rgba(255,255,0,0.3);
+  color: #fa0;
+}
+
+.task-details {
+  padding: 1rem;
+  background: #fafafa;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.task-details > div {
+  margin: 0.5rem 0;
+}
+
+.hectares-section {
+  padding: 0.75rem 1rem;
+  background: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.btn-expand {
+  width: 100%;
+  padding: 0.5rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-expand:hover {
+  background: #f9f9f9;
+  border-color: #667eea;
+}
+
+.hectares-detail {
+  margin-top: 0.75rem;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hectares-list {
+  background: white;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.hectare-entry {
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.hectare-entry:last-child {
+  border-bottom: none;
+}
+
+.hectare-entry span {
+  color: #333;
+}
+
+.btn-remove {
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.2s;
+}
+
+.btn-remove:hover {
+  background: #cc0000;
+}
+
+.hectares-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.hectares-input input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.hectares-input input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.btn-add-hectare {
+  padding: 0.5rem 1rem;
+  background: #00aa00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.btn-add-hectare:hover {
+  background: #008800;
+}
+
+.task-actions {
+  padding: 0.75rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  background: white;
+}
+
+.btn {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-complete {
+  background: #00aa00;
+  color: white;
+}
+
+.btn-complete:hover:not(:disabled) {
+  background: #008800;
+}
+
+.btn-complete:disabled {
+  background: #ffaa00;
+  opacity: 0.8;
+  cursor: wait;
+}
+
+.btn-email {
+  background: #ff9800;
+  color: white;
+}
+
+.btn-sent {
+  background: #ccc;
+  color: #666;
+  cursor: default;
+}
+
+.btn-delete {
+  background: #ff4444;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #cc0000;
+}

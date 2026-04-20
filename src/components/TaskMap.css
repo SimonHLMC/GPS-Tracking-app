@@ -1,0 +1,129 @@
+.task-map-container {
+  margin: 1rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.map-header {
+  padding: 1rem;
+  background: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.map-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.map-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.map-btn {
+  padding: 0.4rem 0.75rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.map-btn:hover {
+  border-color: #667eea;
+  background: #f0f4ff;
+}
+
+.map-btn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.map-info {
+  padding: 0.75rem 1rem;
+  background: #f0f8ff;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.live-indicator {
+  background: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #c33;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.task-map {
+  height: 300px;
+  width: 100%;
+}
+
+.task-map .leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* Custom Marker */
+.custom-marker {
+  background: none;
+  border: none;
+}
+
+.pulsing-marker {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff4444;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px #ff4444;
+  animation: marker-pulse 2s infinite;
+}
+
+@keyframes marker-pulse {
+  0% {
+    box-shadow: 0 0 0 3px #ff4444;
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(255, 68, 68, 0);
+    opacity: 0;
+  }
+}
+
+.arrow-icon {
+  background: none;
+  border: none;
+}
+
+.arrow-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: #0066ff;
+  text-shadow: 0 0 3px white;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
